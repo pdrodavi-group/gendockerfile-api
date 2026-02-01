@@ -17,7 +17,7 @@ jobs:
     environment: production
 
     env:
-      IMAGE: docker.io/pdrodavi/${{ github.event.repository.name }}
+      IMAGE: docker.io/${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
       SHA_TAG: ${{ github.sha }}
       BRANCH_NAME: ${{ github.ref_name }}
 
